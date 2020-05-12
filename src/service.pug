@@ -1,0 +1,31 @@
+extends _layouts/layout
+block content
+  .container
+    .row.my-3
+      .col-12.col-lg-8.mb-3
+        h1 Web Development
+        p
+          | Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab facilis earum esse eaque exercitationem dolor? Consectetur maxime hic voluptatem eligendi explicabo, quidem delectus? Tenetur distinctio explicabo corrupti aliquid sint eveniet tempora recusandae optio, quos corporis amet voluptatibus magni maiores molestias!
+        .card
+          .card-body
+            h4.card-title Contact Us
+            form(action="#!" method="method")
+            .form-group
+              label(for="nama") Nama Lengkap*
+              input#nama.form-control.mb-3(type="text", name="nama", placeholder="Clarisa", required)
+
+              label(for="email") Email*
+              input#email.form-control.mb-3(type="email", name="email", placeholder="clarisa@gmail.com", required)
+
+              label(for="instansi") Instansi
+              input#instansi.form-control.mb-3(type="text", name="instansi", placeholder="ARA Studio")
+
+              label(for="pertanyaan") Pertanyaan
+              textarea#pertanyaan.form-control.mb-3(name="pertanyaan", placeholder="Berapa harga untuk sistem absensi berbasis web?", required)
+            button.btn.btn-primary(type="submit") SEND
+      .col-12.col-lg-4
+        .card
+          .card-body
+            img.card-img(src="/media/services/website.svg")
+            
+          

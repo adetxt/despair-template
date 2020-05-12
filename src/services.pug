@@ -1,0 +1,20 @@
+extends _layouts/layout
+block content
+  include ./_partials/jumbotronSecondary
+  +jumbotronSecond('#Services','Let\'s discover what we offer')
+
+  .container.mt-5
+    .row.align-items-center
+      - let n = 0
+      - let attr = {}
+      - let title = ''
+      while n < 4
+        - attr.style = {'background-image': `url('media/services/${n%2 == 0 ? 'website' : 'android'}.svg')` }
+        - title = n%2 == 0 ? 'Web Development' : 'Mobile App Development'
+        .col-12.col-md-6.col-lg-4.mb-4
+          a.text-dark(href="service.html")
+            .card.card-service&attributes(attr)
+              .card-body
+                .card-title #{title}
+              .card-footer
+        - n++

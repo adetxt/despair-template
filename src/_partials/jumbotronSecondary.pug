@@ -1,0 +1,7 @@
+mixin jumbotronSecond(title, description)
+  - let attr = {}
+  - attr.style = {'background-image' : 'linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)),url(\'media/semi.jpg\')'}
+  .jumbotron.jumbotron-fluid.jumbotron-secondary&attributes(attr)
+    .container
+      h1.text-light= title
+      p.text-light= description

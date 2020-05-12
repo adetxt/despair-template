@@ -1,0 +1,47 @@
+extends _layouts/layout
+block content
+  include _partials/jumbotronMain
+
+  //- Boards
+  .container.section.mt-5
+    .row.justify-content-center.align-items-center
+      .col-12
+        h1 #[strong Boards]
+        p.lead
+          | Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo consectetur, minima laboriosam magnam cumque blanditiis asperiores cupiditate! Sapiente, nam numquam?
+      - let n = 0
+      while n < 3
+        .col-12.col-md-4.my-3.my-md-0
+          a(href='javascript:void(0)' onclick="alert('Comming Soon')")
+            .card.card-board
+              img.card-img(src='/jumbotron.jpg' alt='Ra Tea Apps Showcase')
+        - n++
+      - n = 0
+  
+  //- Quotes
+  .section.bg-dark.text-light.py-5
+    .container
+      .row
+        .col-12
+          blockquote.blockquote.text-center
+            p.mb-0
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            footer.blockquote-footer
+              | Someone famous in 
+              cite(title='Source Title') Source Title
+
+  //- Sertification and Partnership
+  .section.container.mt-5
+    .row.justify-content-center
+      .col-12.col-md-8
+        .row.justify-content-center.align-items-center.text-center
+          .col-12
+            h1 #[strong Follow Us]
+            p.lead
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos veniam reprehenderit nulla provident totam est animi optio! Autem, excepturi quibusdam.
+          while n < 3
+            .col-6.col-lg-4.my-3.my-md-0
+              a(href='https://www.instagram.com/rateamedia/' title='Ra Tea Template Showcase' target="_blank")
+                img.img-partner(src='ratea-logo.png' alt='Ra Tea Template Showcase')
+            - n++
+          - n = 0
